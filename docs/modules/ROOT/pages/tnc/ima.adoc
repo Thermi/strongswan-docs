@@ -1,0 +1,34 @@
+= Integrity Measurement Architecture
+
+:IMA: https://sourceforge.net/p/linux-ima/wiki/Home/
+
+The Linux {IMA}[Integrity Measurement Architecture] (IMA) maintains a runtime
+measurement list and, if anchored in a hardware
+xref:tpm/tpm2.adoc[Trusted Platform Module] (TPM), an aggregate integrity value
+over this list. The benefit of anchoring the aggregate integrity value in the TPM
+is that the measurement list cannot be compromised by any software attack without
+being detectable. Hence on a trusted boot system, IMA can be used to attest the
+system's runtime integrity.
+
+== strongTNC IMA Database
+
+.Assign Device to TPM BIOS Group
+image::tnc_ima_device.png[TPM BIOS Group Assignment, link=self]
+
+
+.Assign Device to TPM BIOS Group
+image::tnc_ima_session.png[TPM BIOS Group Assignment, link=self]
+
+.Assign Device to TPM BIOS Group
+image::tnc_ima_tpm_evidence_1.png[TPM BIOS Group Assignment, link=self]
+
+.Assign Device to TPM BIOS Group
+image::tnc_ima_tpm_evidence_2.png[TPM BIOS Group Assignment, link=self]
+
+== IMA Client
+
+xref:./imaClient.adoc[IMA Client]
+
+== IMA Server
+
+xref:./imaServer.adoc[IMA Server]
